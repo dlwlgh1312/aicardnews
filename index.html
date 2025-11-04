@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>이미지 페이지 전환</title>
+<title>AI 과의존 카드뉴스</title>
 <style>
   body {
     margin: 0;
@@ -35,6 +35,18 @@
     height: auto;
     object-fit: contain;
   }
+
+  /* 버튼 이미지 */
+  .link {
+    position: fixed;
+    top: 75%;
+    left: 50%;
+    
+    transform: translate(-50%, -50%); /* 중앙 정렬 핵심 */
+    cursor: pointer;
+    z-index: 10;
+  }
+
 </style>
 </head>
 <body>
@@ -46,8 +58,12 @@
   <div class="pf"><img src="006.png" /></div>
   <div class="pf"><img src="007.png" /></div>
   <div class="pf"><img src="008.png" /></div>
-  <div class="pf"><img src="009.png" /></div>
 
+  <!-- 마지막 장: 009.png와 버튼 같이 포함 -->
+  <div class="pf">
+    <img src="009.png" />
+    <img src="button1.png" class="link" onclick="window.open('https://github.com', '_blank')" />
+  </div>
 
 <script>
   const pages = document.querySelectorAll('.pf');
@@ -78,6 +94,5 @@
     }
   });
 </script>
-
 </body>
 </html>
